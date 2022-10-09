@@ -21,6 +21,7 @@ def path_request
   puts "What path would you like to visit?"
   user_choice = gets.chomp
   activation = Activate.new(user_choice)
+  activation.valid_request != 'bad request' ? activation.send_request : path_request
 end
 
 
