@@ -3,7 +3,7 @@ module Requests
     if request_check(request) == true
       find_request_match(request)
     else
-      return 'bad request'
+      return 'bad_request'
     end
   end
 
