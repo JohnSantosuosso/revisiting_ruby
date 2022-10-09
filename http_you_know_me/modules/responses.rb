@@ -23,9 +23,11 @@ module Responses
   end
 
   def build_hello_world_response
+    return "Hello World"
   end
 
   def build_datetime_response
+    return Time.now.strftime("%m %M %p %A %B %e")
   end
 
   def shutdown
