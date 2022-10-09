@@ -1,4 +1,7 @@
 require 'socket'
+
+module WebServer
+
 tcp_server = TCPServer.new(9292)
 client = tcp_server.accept
 
@@ -27,3 +30,5 @@ puts ["Wrote this response: headers, output"].join("\r\n")
 client.close
 
 puts "\nResponse complete, exiting."
+
+end

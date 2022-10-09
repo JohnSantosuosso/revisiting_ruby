@@ -5,7 +5,7 @@ require_relative '../modules/responses'
 class Activate
   include Requests
   include Responses
-  # include web_server
+  # include WebServer
 
   attr_accessor :request, :response
 
