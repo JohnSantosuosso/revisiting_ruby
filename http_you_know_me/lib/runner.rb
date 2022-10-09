@@ -18,10 +18,11 @@ def path_request
   puts "C. Visit Date and Time\n"
   puts "D. Shutdown\n\n"
   # sleep(4)
-  puts "What path would you like to visit?"
-  user_choice = gets.chomp
+  puts "What path would you like to visit?\n"
+  #require 'pry'; binding.pry 
+  user_choice = gets.chomp.to_s
   activation = Activate.new(user_choice)
-  activation.valid_request != 'bad request' ? activation.send_request : path_request
+  #activation.valid_request != 'bad request' ? activation.send_request : path_request
 end
 
 
