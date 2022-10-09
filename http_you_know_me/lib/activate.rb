@@ -7,15 +7,12 @@ class Activate
   include Responses
   # include WebServer
 
-  attr_accessor :request, :validated_request
+  attr_accessor :request, :validated_request, :response
 
   def initialize(request)
     @request = request
     @validated_request = validate_request(request)
-  end
-
-  def send_request
-    @validated_request # find matching response
+    @response = find_response(@validated_request)
   end
 
 end
